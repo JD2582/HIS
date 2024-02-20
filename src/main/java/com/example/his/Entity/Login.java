@@ -17,6 +17,7 @@ import lombok.Setter;
 @Entity
 public class Login {
     @Id
-    String username;
-    String password;
+    private String username;
+    private String password;
+    private String role;
 }

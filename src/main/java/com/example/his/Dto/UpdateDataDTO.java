@@ -8,4 +8,5 @@ import lombok.Setter;
 public class UpdateDataDTO {
     private String newUsername;
     private String newPassword;
+    private String newRole;
 }
