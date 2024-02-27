@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Date;
 
@@ -29,9 +30,21 @@ public class Nurse {
     private String phoneNumber;
     private String bloodGroup;
     private String specialization;
-    private String experience;
+    //store it as number of month
+    private int pastExperience;
     private String address;
-    private Date updatedAt;
     private String profileImage;
     private boolean isHead;
+
+
+    // value of below seven field will be between 0-3
+    private int mon;
+    private int tue;
+    private int wed;
+    private int thu;
+    private int fri;
+    private int sat;
+
+    @UpdateTimestamp
+    private Date updatedAt;
 }

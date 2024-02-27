@@ -3,16 +3,14 @@ package com.example.his.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.hibernate.annotations.UpdateTimestamp;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+import java.util.Date;
+
+@Data
 @Table
 @Entity
 public class Login {
@@ -20,4 +18,13 @@ public class Login {
     private String username;
     private String password;
     private String role;
+    private boolean isActive;
+    private String userId;
+
+
+
+    @UpdateTimestamp
+    private java.sql.Date updatedAt;
+
+
 }

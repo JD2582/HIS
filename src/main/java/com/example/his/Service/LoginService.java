@@ -1,5 +1,6 @@
 package com.example.his.Service;
 
+import com.example.his.Entity.Doctor;
 import com.example.his.Entity.Login;
 import com.example.his.Repo.UserRepo;
 import org.slf4j.LoggerFactory;
@@ -59,6 +60,7 @@ public class LoginService {
     @Autowired
     private UserRepo userRepo;
 
+
     private static final Logger log = LoggerFactory.getLogger(LoginService.class);
 
     public boolean authenticateUser(String username, String password, String role) {
@@ -68,6 +70,7 @@ public class LoginService {
 
     public void addData(String username, String password, String role) {
         Login login = new Login();
+//        login.getUserId(doctor.id)
         login.setUsername(username);
         login.setPassword(password);
         login.setRole(role);

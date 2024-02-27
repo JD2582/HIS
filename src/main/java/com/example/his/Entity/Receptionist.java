@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Date;
 @Entity
@@ -29,4 +30,6 @@ public class Receptionist {
     private String bloodGroup;
     private String address;
     private String profileImage;
+    @UpdateTimestamp
+    private Date updatedAt;
 }

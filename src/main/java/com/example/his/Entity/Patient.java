@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Date;
 @Entity
@@ -17,19 +18,19 @@ import java.sql.Date;
 @NoArgsConstructor
 public class Patient {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     private String firstName;
     private String lastName;
     private String gender;
-    private Integer Age;
+    private Date birthDate;
     private String phoneNumber;
     private String bloodGroup;
     private String address;
-    private Date updatedAt;
     private String profileImage;
     private String patient_type;
-    private Integer ward_no;
-    private Integer AdmitId;
+    private int wardNo;
+    private String admitId;
+    @UpdateTimestamp
+    private Date updatedAt;
 }
