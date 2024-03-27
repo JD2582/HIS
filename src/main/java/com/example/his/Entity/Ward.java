@@ -12,17 +12,11 @@ import java.util.List;
 public class Ward {
 
     @Id
-    private String wardNum;
+    private String wardId;
 
+    private String wardNo;
     private String wardType;
     private Date inDate;
-    private Date outDate;
-
-    @OneToMany
-    @JoinColumn(name = "patientId")
-    private List<Patient> patient;
-
-
-
-
+    private boolean isEmpty;
+    private String patient;
 }

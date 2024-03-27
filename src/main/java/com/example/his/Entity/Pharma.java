@@ -1,9 +1,6 @@
 package com.example.his.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,8 +16,7 @@ import java.sql.Date;
 @NoArgsConstructor
 public class Pharma {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     private String email;
     private String firstName;
@@ -31,6 +27,7 @@ public class Pharma {
     private String bloodGroup;
     private String address;
     private String profileImage;
-    @UpdateTimestamp
-    private Date updatedAt;
+
+
+
 }

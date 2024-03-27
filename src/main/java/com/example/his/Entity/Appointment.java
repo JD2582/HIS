@@ -9,16 +9,11 @@ import java.sql.Date;
 @Data
 public class Appointment {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer appointId;
+    private String appointId;
 
-    @OneToOne
-    @JoinColumn(name = "patientId")
-    private Patient patient;
-
-    @ManyToOne
-    @JoinColumn(name="doctorId")
-    private Doctor doctor;
+    private String doctorId;
+    private String patientId;
+    private String admitID;
 
     private Date appointmentdate;
 

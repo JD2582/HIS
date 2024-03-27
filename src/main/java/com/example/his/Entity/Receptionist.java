@@ -18,8 +18,7 @@ import java.sql.Date;
 @NoArgsConstructor
 public class Receptionist {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     private String email;
     private String firstName;
@@ -30,6 +29,4 @@ public class Receptionist {
     private String bloodGroup;
     private String address;
     private String profileImage;
-    @UpdateTimestamp
-    private Date updatedAt;
 }

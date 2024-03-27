@@ -14,20 +14,12 @@ import java.sql.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Diagnosis {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long diagnosisId;
-
-    @ManyToOne
-    @JoinColumn(name = "admit_id")
-    private Admit admit;
-
-    private Date diagDate;
+    private String diagnosisId;
+    private String admitId;
+    private String doctorId;
+    private Date diagnosisDate;
     private String remarks;
-
-    @ManyToOne
-    @JoinColumn(name = "doctor_id")
-    private Doctor doctor;
-
-    private String img;
+    private String imgPath;
 }

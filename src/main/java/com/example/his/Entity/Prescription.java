@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.sql.Clob;
 import java.sql.Date;
 
 @Entity
@@ -15,17 +16,15 @@ import java.sql.Date;
 @NoArgsConstructor
 public class Prescription {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long presId;
+    private String presId;
 
-    @OneToOne
-    @JoinColumn(name = "diagnosis_id")
-    private Diagnosis diagnosis;
+    private String patientId;
 
-    @ManyToOne
-    @JoinColumn(name="pharma_id")
-    private Pharma pharma;
+    @Lob
+    private String medicines;
 
-
-    private Date date;
+    private String diagnosisId;
+    private String pharmacistId;
+    private String doctorId;
+    private Date presDate;
 }

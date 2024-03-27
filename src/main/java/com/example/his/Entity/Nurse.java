@@ -1,8 +1,6 @@
 package com.example.his.Entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,8 +17,7 @@ import java.sql.Date;
 @NoArgsConstructor
 public class Nurse {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     private String email;
     private String firstName;
@@ -44,6 +41,7 @@ public class Nurse {
     private int thu;
     private int fri;
     private int sat;
+    private int sun;
 
     @UpdateTimestamp
     private Date updatedAt;

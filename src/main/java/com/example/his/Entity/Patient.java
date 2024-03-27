@@ -22,15 +22,16 @@ public class Patient {
 
     private String firstName;
     private String lastName;
+    private String email;
     private String gender;
     private Date birthDate;
     private String phoneNumber;
     private String bloodGroup;
     private String address;
     private String profileImage;
-    private String patient_type;
+    private String patientType;
     private int wardNo;
-    private String admitId;
+
     @UpdateTimestamp
     private Date updatedAt;
 }

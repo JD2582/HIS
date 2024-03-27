@@ -15,16 +15,13 @@ import java.util.Date;
 public class Admit {
 
         @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long admitId;
+        private String admitId;
 
-        @ManyToOne
-        @JoinColumn(name = "patient_id")
-        private Patient patient;
 
         //To check is OP or IP
         private String patientType;
         private boolean isActive;
         private boolean isEmergency;
-        private Date date;
+        private Date admitDate;
+        private String patientID;
     }
